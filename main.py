@@ -186,7 +186,7 @@ class GameBoard:
         if len(CELLS_TO_CHECK)>0:
             [self.reset_around_cells(irow, icol) for cell in CELLS_TO_CHECK for irow, cell_row in enumerate(self.cells) for icol, cell in enumerate(cell_row) if cell == self.cells[irow][icol]]
             
-            [self.planes.append(Plane(cell)) if not cell.part_of_terrain() else None for cell in CELLS_TO_CHECK]
+            # [self.planes.append(Plane(cell)) if not cell.part_of_terrain() else None for cell in CELLS_TO_CHECK]
             
             CELLS_TO_CHECK.clear()
             
